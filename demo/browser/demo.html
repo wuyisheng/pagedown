@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>PageDown Demo Page</title>
     <link rel="stylesheet" type="text/css" href="demo.css" />
@@ -9,11 +10,15 @@
 </head>
 
 <body>
-    <div class="wmd-panel half">
+    <div id="demo-eidtor">
         <div id="wmd-button-bar"></div>
-        <textarea class="wmd-input" id="wmd-input"></textarea>
+        <div class="demo-viewer">
+            <div class="wmd-panel">
+                <textarea class="wmd-input" id="wmd-input"></textarea>
+            </div>
+            <div id="wmd-preview" class="wmd-panel wmd-preview wmd-preview-cont"></div>
+        </div>
     </div>
-    <div id="wmd-preview" class="wmd-panel wmd-preview half"></div>
 
     <script type="text/javascript">
     (function() {
@@ -29,4 +34,5 @@
     })();
     </script>
 </body>
+
 </html>
