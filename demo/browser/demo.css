@@ -1,12 +1,14 @@
-
 /**custom in page**/
 .demo-eidtorP{position: relative;}
 .demo-viewer{position: absolute;;width: 100%;top: 46px;bottom: 0px;left: 0px;right: 0px;}
 .wmd-panel,#wmd-preview {position: absolute;width: 50%;margin: 0;}
 .wmd-panel {border: 0;font-size: 12px;resize: none;top: 0px;left: 0px;right: 0px;bottom: 0px;}
 #wmd-preview{left: 50%}
+/**table**/
+.wmd-preview-cont table{width: 100%;border-collapse: collapse;border-spacing: 0;border: 1px solid #eee;background-color: #fff;}
+.wmd-preview-cont table th, table td {padding: 8px;line-height: 20px;vertical-align: top;border: 1px solid #eee;}
 
-/**global**/
+/**refer to https://github.com/Manjiz/mded/blob/master/source/css/mded.css**/
 blockquote {border-left: 2px dotted #888;padding-left: 5px;background: #d0f0ff;}
 .wmd-button-row {position:relative;margin:0;padding:0 5px;height:30px;list-style-type:none;overflow:hidden;}
 .wmd-spacer {float:left;margin:5px 4px;width:1px;height:20px;background:#ddd;}
@@ -24,8 +26,8 @@ blockquote {border-left: 2px dotted #888;padding-left: 5px;background: #d0f0ff;}
 .wmd-prompt-dialog > form {padding:0px;margin:0px;float:left;width:100%;text-align:center;position:relative;}
 .wmd-prompt-dialog input[type="text"] {display:block;width:80%;margin:0 auto;}
 .wmd-prompt-dialog button {margin: 10px; display: inline; width: 7em;}
-.wmd-preview-cont {line-height:1.6;word-wrap:break-word;background: #f6f6f6;font-family: Menlo, Monaco, Consolas, "Courier New", monospace;}
-.wmd-preview-cont>h1:first-child, 
+.wmd-preview-cont {line-height:1.6;word-wrap:break-word;background: #f6f6f6;font-family: Menlo, Monaco, Consolas, "Courier New", monospace;box-sizing: border-box;}
+.wmd-preview-cont>h1:first-child,
 .wmd-preview-cont blockquote:first-child, 
 .wmd-preview-cont h2:first-child, 
 .wmd-preview-cont h3:first-child, 
@@ -61,3 +63,13 @@ blockquote {border-left: 2px dotted #888;padding-left: 5px;background: #d0f0ff;}
 .wmd-preview-cont h5 {font-size:1em;}
 .wmd-preview-cont h6 {font-size:0.86em;}
 .wmd-preview-cont hr {margin:1.5em auto;border:0;border-top:2px dotted #eee;}
+
+/**refer to https://github.com/jmcmanus/pagedown-extra/blob/master/demo/prettify.css**/
+.pln {color: #000}
+@media screen {.str {color: #080}.kwd {color: #008}.com {color: #800}.typ {color: #606}.lit {color: #066}
+.pun,.opn,.clo {color: #660}.tag {color: #008}.atn {color: #606}.atv {color: #080}.dec,.var {color: #606}.fun {color: red}}
+@media print,projection {.str {color: #060}.kwd {color: #006;font-weight: bold}.com {color: #600;font-style: italic}
+.typ {color: #404;font-weight: bold}.lit {color: #044}.pun,.opn,.clo {color: #440}.tag {color: #006;font-weight: bold}
+.atn {color: #404}.atv {color: #060}}
+ol.linenums {margin-top: 0;margin-bottom: 0}li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8 {list-style-type: none}
+li.L1,li.L3,li.L5,li.L7,li.L9 {background: #eee}

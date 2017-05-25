@@ -7,9 +7,11 @@
     <script type="text/javascript" src="../../Markdown.Converter.js"></script>
     <script type="text/javascript" src="../../Markdown.Sanitizer.js"></script>
     <script type="text/javascript" src="../../Markdown.Editor.js"></script>
+    <script type="text/javascript" src="../../Markdown.Extra.js"></script>
+    <script type="text/javascript" src="prettify.js"></script>
 </head>
 
-<body>
+<body onload="prettyPrint()">
     <div id="demo-eidtor">
         <div id="wmd-button-bar"></div>
         <div class="demo-viewer">
@@ -19,7 +21,6 @@
             <div id="wmd-preview" class="wmd-panel wmd-preview wmd-preview-cont"></div>
         </div>
     </div>
-
     <script type="text/javascript">
     (function() {
         var converter = new Markdown.Converter();
@@ -29,10 +30,13 @@
         converter.hooks.chain("plainLinkText", function(url) {
             return "This is a link to " + url.replace(/^https?:\/\//, "");
         });
+        Markdown.Extra.init(converter, {
+            highlighter: "prettify"
+        });
         var editor = new Markdown.Editor(converter);
+        editor.hooks.chain("onPreviewRefresh", prettyPrint);
         editor.run();
     })();
     </script>
 </body>
-
 </html>
