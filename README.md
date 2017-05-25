@@ -6,7 +6,7 @@ The Markdown editor and converter used on Stack Overflow and the other Stack Exc
 
 Open 'browser/demo.html' in browser
  
- ![preview](https://github.com/wuyisheng/pagedown/tree/master/resources/preview.png)
+ ![preview](https://github.com/wuyisheng/pagedown/blob/master/resources/preview.png?raw=true)
 
 Refer to:
 
